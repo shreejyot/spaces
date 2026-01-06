@@ -1,6 +1,6 @@
-# GitHub Codespaces ♥️ Jupyter Notebooks
+# Shree's Quant Codespaces ♥️ Jupyter Notebooks
 
-Welcome to your shiny new codespace! We've got everything fired up and running for you to explore Python and Jupyter notebooks.
+Welcome to Shree's shiny new codespace for Quant Dev! We've got everything fired up and running for you to explore Python and Jupyter notebooks, to test out your ideas.
 
 You've got a blank canvas to work on from a git perspective as well. There's a single initial commit with what you're seeing right now - where you go from here is up to you!
 
