@@ -1,0 +1,40 @@
+Ticker,Name,Category
+^GSPC,S&P 500,US Equities
+^DJI,Dow Jones,US Equities
+^IXIC,Nasdaq Composite,US Equities
+^RUT,Russell 2000,US Equities
+^VIX,CBOE Volatility Index,US Equities
+XLB,Materials,US Cyclic Sectors 
+XLI,Industrial,US Cyclic Sectors 
+XLK,Technology,US Cyclic Sectors 
+XLY,Cons. Disc.,US Cyclic Sectors 
+XLF,Financial,US Cyclic Sectors 
+XLC,Comm. Services,US Cyclic Sectors 
+XLRE,Real Estate,US Defensive Sectors
+XLP,Consumer Staples,US Defensive Sectors
+XLE,Energy,US Defensive Sectors
+XLV,Health Care,US Defensive Sectors
+XLU,Utilities,US Defensive Sectors
+^FTSE,UK - FTSE 100,Ex US Equities
+^FCHI,France - CAC 40,Ex US Equities
+^GDAXI,Germany - DAX,Ex US Equities
+^N225,Japan - Nikkei 225,Ex US Equities
+^NSEI,India - NSE Nifty 50,Ex US Equities
+^HSI,Hong Kong - Hang Seng,Ex US Equities
+^IRX,US - 3 Month Rate,US Rates
+^FVX,US - 5 Year Rate,US Rates
+^TNX,US - 10 Year Rate,US Rates
+^TYX,US - 30 Year Rate,US Rates
+EURUSD=X,Euro ,FX
+JPY=X,Yen,FX
+GBPUSD=X,Pound,FX
+USDCNY=X,Yuan,FX
+CL=F,Crude Oil,Commodity
+NG=F,Natural Gas,Commodity
+GC=F,Gold,Commodity
+SI=F,Silver,Commodity
+HG=F,Copper,Commodity
+BTC-USD,Bitcoin,Crypto
+ETH-USD,Ethereum,Crypto
+SOL-USD,Solana,Crypto
+XRP-USD,Ripple,Crypto

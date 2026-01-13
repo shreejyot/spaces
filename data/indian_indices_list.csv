@@ -1,0 +1,21 @@
+index_type,name,ticker,description
+market,S&P BSE SENSEX,^BSESN,Benchmark index of BSE (Top 30 companies)
+market,Nifty 50,^NSEI,Benchmark index of NSE (Top 50 companies)
+market,Nifty Next 50,^NSMIDCP,The 50 companies after Nifty 50
+market,Nifty 100,^CNX100,Top 100 companies by market cap
+sector,Nifty Financial Services,NIFTY_FIN_SERVICE.NS,"Includes banks, NBFCs, and insurance (Finnifty)"
+sector,Nifty Bank,^NSEBANK,Most liquid banking stocks (Derivative favorite)
+sector,Nifty IT,^CNXIT,Information Technology sector
+sector,Nifty PSE,^CNXPSE,Public Sector Enterprises
+sector,Nifty Pharma,^CNXPHARMA,Pharmaceutical sector
+sector,Nifty Auto,^CNXAUTO,Automobile sector
+sector,Nifty FMCG,^CNXFMCG,Fast-moving consumer goods
+sector,Nifty PSU Bank,^CNXPSUBANK,Public sector (Government) banks
+sector,Nifty Realty,^CNXREALTY,Real estate sector
+sector,Nifty Energy,^CNXENERGY,Energy and power sector
+market,Nifty 500,^CRSLDX,Broad market index (Top 500 companies)
+sector,Nifty Infrastructure,^CNXINFRA,Infrastructure sector
+sector,Nifty Media,^CNXMEDIA,Media and entertainment sector
+sector,Nifty Private Bank,NIFTY_PVT_BANK.NS,Private sector banks
+comm,Nifty Commodities,^CNXCMDT,Commodity-linked companies
+comm,Nifty Metal,^CNXMETAL,Metal and mining sector
