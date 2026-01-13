@@ -4,6 +4,8 @@ from datetime import date
 import yfinance as yf
 import matplotlib.pyplot as plt
 
+st.set_page_config(layout="wide")
+
 # Load ticker data
 ticker_df = pd.read_csv('../data/nifty_100_tickers.csv')
 ticker_options = ticker_df['yfinance Ticker'].tolist()
@@ -28,12 +30,18 @@ st.write(f'Date Range: {start_date} to {end_date}')
 if fetch_data:
     with st.spinner('Fetching data...'):
         data = yf.download(ticker, start=start_date, end=end_date)
+        data['Close'] = data['Close'].astype(float)
+        data = data[data['Close']>0]
     if not data.empty:
         fig, ax = plt.subplots(figsize=(10, 5))
         data['Close'].plot(ax=ax)
         ax.set_title(f'{ticker_name} ({ticker}) Closing Price')
         ax.set_xlabel('Date')
         ax.set_ylabel('Close Price (INR)')
-        st.pyplot(fig)
+        
+        # Use 75% width for the plot
+        col1, col2 = st.columns([3, 1])
+        with col1:
+            st.pyplot(fig)
     else:
         st.warning('No data found for the selected range and ticker.')
