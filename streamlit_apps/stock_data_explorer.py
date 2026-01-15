@@ -50,7 +50,8 @@ def main():
         with col2:
             end_date = st.date_input('End', value=date(2026, 1, 1), key='end_date')
         ticker_names = st.multiselect('Select Tickers (max 4)', list(ticker_dict.keys()), default=[list(ticker_dict.keys())[0]], key='ticker_names')
-        st.text("")
+        interval = st.selectbox('Data Interval', ['1m', '2m', '5m', '15m', '30m', '60m', '90m', '1h', '1d', '5d', '1wk', '1mo'], index=8, key='interval',)
+        st.text("Intraday data limited to last 60 days")
         st.markdown("---")
         st.text("")
         st.checkbox('Rescale to 100',   value = False,key='rescale')
@@ -80,7 +81,7 @@ def main():
                 any_plotted = False
                 for name in ticker_names:
                     symbol = ticker_dict[name]
-                    data = yf.download(symbol, start=start_date, end=end_date)
+                    data = yf.download(symbol, start=start_date, end=end_date,interval=interval, progress=False)
                     if data is None or data.empty:
                         st.warning(f'No data found for {symbol} ({name})')
                         continue
@@ -101,7 +102,7 @@ def main():
                     rescale_val = 100
                     if st.session_state.get('rescale', True):
                         if rescale_date.strftime("%Y-%m-%d") not in series.index:
-                            st.warning(f'Rescale date {rescale_date} not found in data for {symbol} ({name}). Skipping rescaling to starting value')
+                            st.warning(f'Rescale date {rescale_date} not found in data for {symbol} ({name}). Rescaling to starting value as 100 instead.')
                             rescale_val = start_val
                         else:
                             rescale_val = series[series.index == rescale_date.strftime("%Y-%m-%d")].iloc[0]
