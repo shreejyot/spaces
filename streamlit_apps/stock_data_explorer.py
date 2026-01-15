@@ -6,42 +6,137 @@ import matplotlib.pyplot as plt
 
 st.set_page_config(layout="wide")
 
-# Load ticker data
-ticker_df = pd.read_csv('../data/nifty_100_tickers.csv')
-ticker_options = ticker_df['yfinance Ticker'].tolist()
-ticker_names = ticker_df['Name'].tolist()
-ticker_dict = dict(zip(ticker_names, ticker_df['yfinance Ticker']))
+# Dataset files mapping
+DATASET_FILES = {
+    'US Watchlist': './data/us_watchlist.csv',
+    'Nifty 100 tickers': './data/nifty_100_tickers.csv',
+    'India indices': './data/indian_indices_list.csv',
+    'US indices': './data/us_indices_data.csv',
+}
 
-# Sidebar inputs
-with st.sidebar:
-    st.header('Select Parameters')
-    start_date = st.date_input('Start Date', value=date(2025, 1, 1), key='start_date')
-    end_date = st.date_input('End Date', value=date(2026, 1, 1), key='end_date')
-    ticker_name = st.selectbox('Select Ticker', ticker_names, key='ticker_name')
-    fetch_data = st.button('Fetch & Plot Data', key='fetch_button')
+def load_tickers(ticker_file = DATASET_FILES['Nifty 100 tickers']):
+    df = pd.read_csv(ticker_file)
+    ticker_dict = pd.Series(df.Ticker.values, index=df.Name).to_dict()
+    return ticker_dict
 
-ticker = ticker_dict[ticker_name]
+def main():
+    # Reducing whitespace on the top of the page
+    st.markdown("""
+                <style>
 
-# Main area
-st.title('Nifty 100 Stock Data Explorer')
-st.write(f'Selected Ticker: {ticker} ({ticker_name})')
-st.write(f'Date Range: {start_date} to {end_date}')
+                .block-container
+                {
+                    padding-top: 1rem;
+                    padding-bottom: 0rem;
+                    margin-top: 1rem;
+                }
 
-if fetch_data:
-    with st.spinner('Fetching data...'):
-        data = yf.download(ticker, start=start_date, end=end_date)
-        data['Close'] = data['Close'].astype(float)
-        data = data[data['Close']>0]
-    if not data.empty:
-        fig, ax = plt.subplots(figsize=(10, 5))
-        data['Close'].plot(ax=ax)
-        ax.set_title(f'{ticker_name} ({ticker}) Closing Price')
-        ax.set_xlabel('Date')
-        ax.set_ylabel('Close Price (INR)')
-        
-        # Use 75% width for the plot
-        col1, col2 = st.columns([3, 1])
+                </style>
+                """, unsafe_allow_html=True)
+
+    # Sidebar inputs
+    with st.sidebar:
+
+        st.header('Select Parameters')
+
+        ticker_file = st.selectbox('Select Dataset', list(DATASET_FILES.keys()), key='ticker_file')
+        ticker_dict = load_tickers(DATASET_FILES[ticker_file])
+        st.text("")
+        st.markdown("---")
+        st.text("")
+        col1, col2 = st.columns(2)
         with col1:
-            st.pyplot(fig)
-    else:
-        st.warning('No data found for the selected range and ticker.')
+            start_date = st.date_input('Start', value=date(2025, 1, 1), key='start_date')
+        with col2:
+            end_date = st.date_input('End', value=date(2026, 1, 1), key='end_date')
+        ticker_names = st.multiselect('Select Tickers (max 4)', list(ticker_dict.keys()), default=[list(ticker_dict.keys())[0]], key='ticker_names')
+        st.text("")
+        st.markdown("---")
+        st.text("")
+        st.checkbox('Rescale to 100',   value = False,key='rescale')
+        rescale_date = st.date_input('Rescale Date', value=start_date, key='rescale_date')
+        st.text("")
+        st.markdown("---")
+        st.text("")
+        fetch_data = st.button('Fetch & Plot Data', key='fetch_button')
+
+    # Main area
+    st.title('Time Series Data Explorer')
+    selected_display = ', '.join([f"{ticker_dict[n]} ({n})" for n in st.session_state.get('ticker_names', [])])
+    st.write(f'Selected Tickers: {selected_display}')
+    st.write(f'Date Range: {start_date} to {end_date}')
+    
+
+    if fetch_data:
+        # Enforce maximum of 3 tickers on the same chart
+        ticker_names = st.session_state.get('ticker_names', [])
+        if len(ticker_names) == 0:
+            st.warning('Please select at least one ticker to fetch data for.')
+        elif len(ticker_names) > 4:
+            st.error('Please select at most 4 tickers to plot on the same chart.')
+        else:
+            with st.spinner('Fetching data...'):
+                fig, ax = plt.subplots(figsize=(12, 6))
+                any_plotted = False
+                for name in ticker_names:
+                    symbol = ticker_dict[name]
+                    data = yf.download(symbol, start=start_date, end=end_date)
+                    if data is None or data.empty:
+                        st.warning(f'No data found for {symbol} ({name})')
+                        continue
+                    if 'Close' not in data.columns or data['Close'].dropna().empty:
+                        st.warning(f'No close price data for {symbol} ({name})')
+                        continue
+                    series = data['Close'].astype(float).sort_index()
+                    if series.empty:
+                        st.warning(f'No valid data for {symbol} ({name})')
+                        continue
+                    any_plotted = True
+                    start_val = series.iloc[0]
+                    end_val = series.iloc[-1]
+                    pct_return = float((end_val / start_val - 1) * 100)
+                    return_str = f"{symbol}: {pct_return:+.2f}% | "
+
+                    # apply rescale to start at 100 if requested
+                    rescale_val = 100
+                    if st.session_state.get('rescale', True):
+                        if rescale_date.strftime("%Y-%m-%d") not in series.index:
+                            st.warning(f'Rescale date {rescale_date} not found in data for {symbol} ({name}). Skipping rescaling to starting value')
+                            rescale_val = start_val
+                        else:
+                            rescale_val = series[series.index == rescale_date.strftime("%Y-%m-%d")].iloc[0]
+                            
+                    series = series.copy() / rescale_val * 100
+
+                    # compute high/low and their dates
+                    high_idx = series.idxmax().iloc[0]
+                    high_val = float(series.max().iloc[0])
+                    high_str =  f"High {high_val:.2f} on {high_idx:%Y-%m-%d} | "
+                    print(high_str)
+
+
+                    low_idx = series.idxmin().iloc[0]
+                    low_val = float(series.min().iloc[0])
+                    low_str =  f"Low {low_val:.2f} on {low_idx:%Y-%m-%d}"
+                    print(low_str)  
+
+                    # build a detailed legend label including pct return, high and low with dates
+                    label = return_str + high_str + low_str
+                    
+                    ax.plot(series.index, series.values, label=label)
+
+                    # plot high / low markers (no extra legend entries)
+                    ax.plot(high_idx, high_val, marker='^', color='green', markersize=8)
+                    ax.plot(low_idx, low_val, marker='v', color='red', markersize=8)
+
+                if any_plotted:
+                    ax.legend(fontsize='small')
+                    ax.grid(alpha=0.3)
+                    ax.set_xlabel('Date')
+                    ax.set_ylabel('Close Price')
+                    st.pyplot(fig)
+                else:
+                    st.warning('No data found for the selected range and tickers.')
+
+if __name__ == '__main__':
+    main()

@@ -1,0 +1,83 @@
+Ticker,Name,Category
+IBIT,iShares Bitcoin Trust,Crypto
+FETH,Fidelity Ethereum Fund,Crypto
+BITU,ProShares Ultra Bitcoin (2x Long),Crypto
+SBIT,ProShares UltraShort Bitcoin (2x Short),Crypto
+MSTR,Micro Strategy,Crypto
+BMNR,Bitmine,Crypto
+COIN,Coinbase,Crypto
+CRCL,Circle,Crypto
+TLT,iShares 20+ Year Treasury Bond ETF,Bond Markets
+TMF,Direxion Daily 20+ Year Treasury Bull 3x Shares,Bond Markets
+TTT,ProShares UltraPro Short 20+ Year Treasury (3x Short),Bond Markets
+TYD,Direxion Daily 7-10 Year Treasury Bull 3x Shares,Bond Markets
+TYO,Direxion Daily 7-10 Year Treasury Bear 3x Shares,Bond Markets
+AAPL,Apple Inc.,Equities - Information Technology
+MSFT,Microsoft Corporation,Equities - Information Technology
+NVDA,NVIDIA Corporation,Equities - Information Technology
+AVGO,Broadcom Inc.,Equities - Information Technology
+ORCL,Oracle Corporation,Equities - Information Technology
+LLY,Eli Lilly and Company,Equities - Health Care
+UNH,UnitedHealth Group Incorporated,Equities - Health Care
+JNJ,Johnson & Johnson,Equities - Health Care
+ABBV,AbbVie Inc.,Equities - Health Care
+MRK,Merck & Co. Inc.,Equities - Health Care
+BRK-B,Berkshire Hathaway Inc. Class B,Equities - Financials
+JPM,JPMorgan Chase & Co.,Equities - Financials
+GS,Goldman Sachs, Equities - Financials
+V,Visa Inc.,Equities - Financials
+MA,Mastercard Incorporated,Equities - Financials
+BAC,Bank of America Corporation,Equities - Financials
+AMZN,Amazon.com Inc.,Equities - Consumer Discretionary
+TSLA,Tesla Inc.,Equities - Consumer Discretionary
+HD,The Home Depot Inc.,Equities - Consumer Discretionary
+MCD,McDonald's Corporation,Equities - Consumer Discretionary
+NKE,NIKE Inc.,Equities - Consumer Discretionary
+META,Meta Platforms Inc.,Equities - Communication Services
+GOOGL,Alphabet Inc. Class A,Equities - Communication Services
+NFLX,Netflix Inc.,Equities - Communication Services
+TMUS,T-Mobile US Inc.,Equities - Communication Services
+DIS,The Walt Disney Company,Equities - Communication Services
+GE,GE Aerospace,Equities - Industrials
+CAT,Caterpillar Inc.,Equities - Industrials
+UNP,Union Pacific Corporation,Equities - Industrials
+HON,Honeywell International Inc.,Equities - Industrials
+RTX,RTX Corporation,Equities - Industrials
+WMT,Walmart Inc.,Equities - Consumer Staples
+PG,The Procter & Gamble Company,Equities - Consumer Staples
+COST,Costco Wholesale Corporation,Equities - Consumer Staples
+KO,The Coca-Cola Company,Equities - Consumer Staples
+PEP,PepsiCo Inc.,Equities - Consumer Staples
+XOM,Exxon Mobil Corporation,Equities - Energy
+CVX,Chevron Corporation,Equities - Energy
+COP,ConocoPhillips,Equities - Energy
+MPC,Marathon Petroleum Corporation,Equities - Energy
+VLO,Valero Energy Corporation,Equities - Energy
+NEE,NextEra Energy Inc.,Equities - Utilities
+SO,The Southern Company,Equities - Utilities
+DUK,Duke Energy Corporation,Equities - Utilities
+CEG,Constellation Energy Corporation,Equities - Utilities
+D,Dominion Energy Inc.,Equities - Utilities
+PLD,Prologis Inc.,Equities - Real Estate
+AMT,American Tower Corporation,Equities - Real Estate
+EQIX,Equinix Inc.,Equities - Real Estate
+WELL,Welltower Inc.,Equities - Real Estate
+SPG,Simon Property Group Inc.,Equities - Real Estate
+LIN,Linde plc,Equities - Materials
+SHW,The Sherwin-Williams Company,Equities - Materials
+APD,Air Products and Chemicals Inc.,Equities - Materials
+FCX,Freeport-McMoRan Inc.,Equities - Materials
+CTVA,Corteva Inc.,Equities - Materials
+USO,United States Oil Fund LP,Commodity
+UNG,United States Natural Gas Fund LP,Commodity
+GLD,SPDR Gold Shares,Commodity
+SLV,iShares Silver Trust,Commodity
+PPLT,abrdn Physical Platinum Shares ETF,Commodity
+PALL,abrdn Physical Palladium Shares ETF,Commodity
+CPER,United States Copper Index Fund,Commodity
+FXI,iShares China Large-Cap ETF,Emerging Markets
+INDA,iShares MSCI India ETF,Emerging Markets
+EWZ,iShares MSCI Brazil ETF,Emerging Markets
+EWW,iShares MSCI Mexico ETF,Emerging Markets
+EWT,iShares MSCI Taiwan ETF,Emerging Markets
+EWY,iShares MSCI South Korea ETF,Emerging Markets

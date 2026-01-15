@@ -1,4 +1,4 @@
-index_type,name,ticker,description
+Category,Name,Ticker,Description
 market,S&P BSE SENSEX,^BSESN,Benchmark index of BSE (Top 30 companies)
 market,Nifty 50,^NSEI,Benchmark index of NSE (Top 50 companies)
 market,Nifty Next 50,^NSMIDCP,The 50 companies after Nifty 50
