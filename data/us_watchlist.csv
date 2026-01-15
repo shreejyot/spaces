@@ -81,3 +81,53 @@ EWZ,iShares MSCI Brazil ETF,Emerging Markets
 EWW,iShares MSCI Mexico ETF,Emerging Markets
 EWT,iShares MSCI Taiwan ETF,Emerging Markets
 EWY,iShares MSCI South Korea ETF,Emerging Markets
+SQQQ,ProShares UltraPro Short QQQ,3x inverse daily performance of the Nasdaq-100 Index.
+PSQ,ProShares Short QQQ,1x inverse daily performance of the Nasdaq-100 Index.
+QID,ProShares UltraShort QQQ,2x inverse daily performance of the Nasdaq-100 Index.
+SH,ProShares Short S&P500,1x inverse daily performance of the S&P 500 Index.
+SDS,ProShares UltraShort S&P500,2x inverse daily performance of the S&P 500 Index.
+SPXU,ProShares UltraPro Short S&P500,3x inverse daily performance of the S&P 500 Index.
+SPXS,Direxion Daily S&P 500 Bear 3X Shares,3x inverse daily performance of the S&P 500 Index.
+SPDN,Direxion Daily S&P 500 Bear 1X Shares,1x inverse daily performance of the S&P 500 Index.
+DOG,ProShares Short Dow30,1x inverse daily performance of the Dow Jones Industrial Average.
+DXD,ProShares UltraShort Dow30,2x inverse daily performance of the Dow Jones Industrial Average.
+SDOW,ProShares UltraPro Short Dow30,3x inverse daily performance of the Dow Jones Industrial Average.
+RWM,ProShares Short Russell2000,1x inverse daily performance of the Russell 2000 Index.
+TWM,ProShares UltraShort Russell2000,2x inverse daily performance of the Russell 2000 Index.
+SRTY,ProShares UltraPro Short Russell2000,3x inverse daily performance of the Russell 2000 Index.
+TZA,Direxion Daily Small Cap Bear 3X Shares,3x inverse daily performance of the Russell 2000 Index.
+SOXS,Direxion Daily Semiconductor Bear 3X Shares,3x inverse daily performance of the NYSE Semiconductor Index.
+FAZ,Direxion Daily Financial Bear 3X Shares,3x inverse daily performance of the Financial Select Sector Index.
+LABD,Direxion Daily S&P Biotech Bear 3X Shares,3x inverse daily performance of the S&P Biotechnology Select Industry Index.
+TECS,Direxion Daily Technology Bear 3X Shares,3x inverse daily performance of the Technology Select Sector Index.
+DRIP,Direxion Daily S&P Oil & Gas Exp. & Prod. Bear 2X Shares,2x inverse daily performance of the S&P Oil & Gas Exploration & Production Select Industry Index.
+YANG,Direxion Daily FTSE China Bear 3X Shares,3x inverse daily performance of the FTSE China 50 Index.
+BITI,ProShares Short Bitcoin ETF,1x inverse daily performance of the Bloomberg Bitcoin Index.
+SARK,Tradr 2X Short Innovation Daily ETF,2x inverse daily performance of the ARK Innovation ETF (ARKK).
+TBT,ProShares UltraShort 20+ Year Treasury,2x inverse daily performance of the ICE U.S. Treasury 20+ Year Bond Index.
+TMV,Direxion Daily 20+ Year Treasury Bear 3X Shares,3x inverse daily performance of the ICE U.S. Treasury 20+ Year Bond Index.
+SCO,ProShares UltraShort Bloomberg Crude Oil,2x inverse daily performance of the Bloomberg WTI Crude Oil Subindex.
+GLL,ProShares UltraShort Gold,2x inverse daily performance of the Bloomberg Gold Subindex.
+ZSL,ProShares UltraShort Silver,2x inverse daily performance of the Bloomberg Silver Subindex.
+KOLD,ProShares UltraShort Bloomberg Natural Gas,2x inverse daily performance of the Bloomberg Natural Gas Subindex.
+EEV,ProShares UltraShort MSCI Emerging Markets,2x inverse daily performance of the MSCI Emerging Markets Index.
+EDZ,Direxion Daily MSCI Emerging Markets Bear 3X Shares,3x inverse daily performance of the MSCI Emerging Markets Index.
+FXP,ProShares UltraShort FTSE China 50,2x inverse daily performance of the FTSE China 50 Index.
+SRS,ProShares UltraShort Real Estate,2x inverse daily performance of the Dow Jones U.S. Real Estate Index.
+DRV,Direxion Daily Real Estate Bear 3X Shares,3x inverse daily performance of the Real Estate Select Sector Index.
+SKF,ProShares UltraShort Financials,2x inverse daily performance of the Dow Jones U.S. Financials Index.
+SSG,ProShares UltraShort Semiconductors,2x inverse daily performance of the Dow Jones U.S. Semiconductors Index.
+ERY,Direxion Daily Energy Bear 2X Shares,2x inverse daily performance of the Energy Select Sector Index.
+DUG,ProShares UltraShort Oil & Gas,2x inverse daily performance of the Dow Jones U.S. Oil & Gas Index.
+WEBS,Direxion Daily Dow Jones Internet Bear 3X Shares,3x inverse daily performance of the Dow Jones Internet Composite Index.
+HIBS,Direxion Daily S&P 500 High Beta Bear 3X Shares,3x inverse daily performance of the S&P 500 High Beta Index.
+TYO,Direxion Daily 7-10 Year Treasury Bear 3X Shares,3x inverse daily performance of the ICE U.S. Treasury 7-10 Year Bond Index.
+PST,ProShares UltraShort 7-10 Year Treasury,2x inverse daily performance of the ICE U.S. Treasury 7-10 Year Bond Index.
+TBF,ProShares Short 20+ Year Treasury,1x inverse daily performance of the ICE U.S. Treasury 20+ Year Bond Index.
+REW,ProShares UltraShort Technology,2x inverse daily performance of the Dow Jones U.S. Technology Index.
+SIJ,ProShares UltraShort Industrials,2x inverse daily performance of the Dow Jones U.S. Industrials Index.
+RXD,ProShares UltraShort Health Care,2x inverse daily performance of the Dow Jones U.S. Health Care Index.
+SZK,ProShares UltraShort Consumer Goods,2x inverse daily performance of the Dow Jones U.S. Consumer Goods Index.
+SCC,ProShares UltraShort Consumer Services,2x inverse daily performance of the Dow Jones U.S. Consumer Services Index.
+SMN,ProShares UltraShort Basic Materials,2x inverse daily performance of the Dow Jones U.S. Basic Materials Index.
+SDP,ProShares UltraShort Utilities,2x inverse daily performance of the Dow Jones U.S. Utilities Index.

@@ -81,7 +81,7 @@ def main():
                 any_plotted = False
                 for name in ticker_names:
                     symbol = ticker_dict[name]
-                    data = yf.download(symbol, start=start_date, end=end_date,interval=interval, progress=False)
+                    data = yf.download(symbol, start=start_date, end=end_date,interval=interval, progress=False, ignore_tz='ET')
                     if data is None or data.empty:
                         st.warning(f'No data found for {symbol} ({name})')
                         continue
