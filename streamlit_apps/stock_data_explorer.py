@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from datetime import date
+from datetime import date, timedelta
 import yfinance as yf
 import matplotlib.pyplot as plt
 
@@ -46,9 +46,9 @@ def main():
         st.text("")
         col1, col2 = st.columns(2)
         with col1:
-            start_date = st.date_input('Start', value=date(2025, 1, 1), key='start_date')
+            start_date = st.date_input('Start', value=date.today() - timedelta(days=31), key='start_date')
         with col2:
-            end_date = st.date_input('End', value=date(2026, 1, 1), key='end_date')
+            end_date = st.date_input('End', value=date.today(), key='end_date')
         ticker_names = st.multiselect('Select Tickers (max 4)', list(ticker_dict.keys()), default=[list(ticker_dict.keys())[0]], key='ticker_names')
         interval = st.selectbox('Data Interval', ['1m', '2m', '5m', '15m', '30m', '60m', '90m', '1h', '1d', '5d', '1wk', '1mo'], index=8, key='interval',)
         st.text("Intraday data limited to last 60 days")
