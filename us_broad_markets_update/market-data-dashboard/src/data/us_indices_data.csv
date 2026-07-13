@@ -1,0 +1,13 @@
+Category,Ticker,Name
+Equity,SPY,S&P 500 ETF
+Equity,DIA,Dow Jones Industrial Average
+Equity,QQQ,NASDAQ-100 ETF
+Equity,IWM,Russell 2000 ETF
+Equity,VTI,Vanguard Total Stock Market ETF
+Bond,TLT,iShares 20+ Year Treasury Bond ETF
+Bond,IEF,iShares 7-10 Year Treasury Bond ETF
+Bond,BND,Vanguard Total Bond Market ETF
+Commodity,GLD,SPDR Gold Shares
+Commodity,SLV,SLV Silver Trust
+Commodity,USO,United States Oil Fund
+Real Estate,VNQ,Vanguard Real Estate ETF

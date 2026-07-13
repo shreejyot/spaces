@@ -1,0 +1,18 @@
+Name,Ticker,Category,Frequency
+Secured Overnight Financing Rate,SOFR,Interest Rate,Daily
+10-Year Treasury Constant Maturity Rate,GS10,Interest Rate,Daily
+US AAA - OAS,BAMLC0A1CAAA,Credit Spread,Daily
+US AA - OAS,BAMLC0A2CAA,Credit Spread,Daily
+US A - OAS,BAMLC0A3CA,Credit Spread,Daily
+US BBB - OAS,BAMLC0A4CBBB,Credit Spread,Daily
+US High Yield - OAS,BAMLH0A0HYM2,Credit Spread,Daily
+Nominal GDP % - Change QoQ (Ann.),A191RP1Q027SBEA,GDP,Quarterly
+Real Gross Domestic Product,GDPC1,GDP,Quarterly
+Headline - Consumer Price Index,CPIAUCSL,Inflation,Monthly
+Core - Consumer Price Index,CPILFESL,Inflation,Monthly
+Industrial Production Index,INDPRO,Production,Monthly
+Capacity Utilization: Total Industry,TCU,Production,Monthly
+All Employees: Total Nonfarm,PAYEMS,Employment,Monthly
+Average Hourly Earnings of Private Employees,CES0500000003,Employment,Monthly
+Civilian Unemployment Rate,UNRATE,Employment,Monthly
+Civilian Labor Force Participation Rate,CIVPART,Employment,Monthly

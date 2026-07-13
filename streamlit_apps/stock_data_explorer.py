@@ -102,7 +102,7 @@ def main():
                     rescale_val = 100
                     if st.session_state.get('rescale', True):
                         if rescale_date.strftime("%Y-%m-%d") not in series.index:
-                            st.warning(f'Rescale date {rescale_date} not found in data for {symbol} ({name}). Rescaling to starting value as 100 instead.')
+                            st.toast(f'Rescale date {rescale_date} not found in data for {symbol} ({name}). Rescaling to starting value as 100 instead.')
                             rescale_val = start_val
                         else:
                             rescale_val = series[series.index == rescale_date.strftime("%Y-%m-%d")].iloc[0]
