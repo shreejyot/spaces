@@ -1,0 +1,17 @@
+Ticker,Description,AssetClass
+XLE,Energy,Equity
+XLV,Health Care,Equity
+XLF,Financials,Equity
+XLK,Technology,Equity
+XLP,Consumer Staples,Equity
+XLB,Materials,Equity
+XLRE,Real Estate,Equity
+XLY,Consumer Discretionary,Equity
+XLI,Industrials,Equity
+XLU,Utilities,Equity
+XLC,Communication Services,Equity
+IBIT,Bitcoin,Crypto
+FETH,Ethereum,Crypto
+GSOL,Solana,Crypto
+BHYP,Hyperliquid,Crypto
+XRP,Ripple,Crypto
